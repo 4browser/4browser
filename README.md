@@ -136,6 +136,29 @@ Key Rust dependencies:
 - SQLite3 (bundled)
 
 ### Build
+
+**Linux/macOS (Bash):**
+```bash
+./build.sh                    # Build release (default)
+./build.sh debug              # Build debug version
+./build.sh release feature1   # Build with features
+```
+
+**Windows (PowerShell):**
+```powershell
+.\build.ps1                          # Build release (default)
+.\build.ps1 debug                    # Build debug version
+.\build.ps1 release "feature1"       # Build with features
+```
+
+**Windows (Command Prompt):**
+```cmd
+build.bat                     # Build release (default)
+build.bat debug               # Build debug version
+build.bat release feature1    # Build with features
+```
+
+**Manual build (all platforms):**
 ```bash
 cargo build --release
 ```
