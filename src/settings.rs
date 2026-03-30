@@ -62,7 +62,7 @@ impl Default for BrowserSettings {
             default_search_engine: "https://www.google.com/search?q=".to_string(),
             home_page: "about:home".to_string(),
             startup_behavior: "open_home".to_string(),
-            download_location: dirs::Downloads::download_dir().unwrap_or_else(|_| PathBuf::from("~/Downloads")),
+            download_location: dirs::download_dir().unwrap_or_else(|| PathBuf::from("~/Downloads")),
             auto_update: true,
         }
     }

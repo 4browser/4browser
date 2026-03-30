@@ -40,7 +40,7 @@ pub struct DownloadManager {
 impl Default for DownloadManager {
     fn default() -> Self {
         Self {
-            path: dirs::Downloads::download_dir()
+            path: dirs::download_dir()
                 .unwrap_or_default()
                 .to_string_lossy()
                 .to_string(),
