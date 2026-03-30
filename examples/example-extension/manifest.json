@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "4Browser Example Extension",
+  "version": "1.0.0",
+  "description": "A simple example extension for 4Browser",
+  "author": "4 Browser Team",
+  "homepage_url": "https://github.com/4browser/4browser",
+  
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+  
+  "action": {
+    "default_title": "Example Extension",
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/icon-128.png"
+  },
+  
+  "background": {
+    "service_worker": "background/service-worker.js"
+  }
+}
