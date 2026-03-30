@@ -75,7 +75,7 @@ if %errorlevel% neq 0 (
 echo.
 
 REM Determine binary path
-set BINARY_NAME=4browser.exe
+set BINARY_NAME=fourbrowser.exe
 set BINARY_PATH=target\!BUILD_MODE!\!BINARY_NAME!
 
 REM Check if build succeeded

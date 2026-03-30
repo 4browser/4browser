@@ -56,7 +56,7 @@ try {
 Write-Host ""
 
 # Determine binary path
-$binaryName = "4browser.exe"
+$binaryName = "fourbrowser.exe"
 $binaryPath = Join-Path "target" $buildMode $binaryName
 
 # Check if build succeeded

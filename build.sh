@@ -48,9 +48,9 @@ fi
 
 # Determine binary path
 if [ "$BUILD_TYPE" = "debug" ]; then
-    BINARY="./target/debug/4browser"
+    BINARY="./target/debug/fourbrowser"
 else
-    BINARY="./target/release/4browser"
+    BINARY="./target/release/fourbrowser"
 fi
 
 # Check if build succeeded

@@ -42,7 +42,7 @@ directories = "5.0"
 tempfile = "3.8"
 
 [[bin]]
-name = "4browser"
+name = "fourbrowser"
 path = "src/main.rs"
 
 [profile.release]
