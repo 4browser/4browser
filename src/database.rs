@@ -1,8 +1,6 @@
 use anyhow::Result;
-use chrono::Utc;
 use log::info;
 use rusqlite::{params, Connection};
-use serde_json::json;
 use std::path::Path;
 use std::sync::Mutex;
 
@@ -117,7 +115,8 @@ pub fn execute_query(sql: &str, params: &[&dyn rusqlite::ToSql]) -> Result<Vec<V
     let results = stmt
         .query_map(params, |row| {
             let mut row_data = Vec::new();
-            for i in 0..row.as_ref().column_count()? {
+            let col_count = row.as_ref().column_count();
+            for i in 0..col_count {
                 let val: String = row.get(i).unwrap_or_default();
                 row_data.push(val);
             }

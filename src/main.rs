@@ -27,7 +27,7 @@ async fn main() -> Result<()> {
     database::init(&app_data_dir).await?;
 
     // Initialize settings
-    let mut settings = settings::Settings::load(&app_data_dir).await?;
+    let settings = settings::Settings::load(&app_data_dir).await?;
     info!("Loaded settings: browser_name={}", settings.browser_name);
 
     // Initialize permission manager

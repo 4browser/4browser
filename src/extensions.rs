@@ -148,7 +148,7 @@ impl ExtensionManager {
         Ok(extension_id)
     }
 
-    async fn extract_zip_extension(&self, zip_file: &Path, dest: &Path) -> Result<()> {
+    async fn extract_zip_extension(&self, _zip_file: &Path, dest: &Path) -> Result<()> {
         // This would require a zip extraction library
         // For now, we'll just return an error unless implemented
         tokio::fs::create_dir_all(dest).await?;
@@ -227,7 +227,7 @@ async fn copy_dir_recursive(src: &Path, dst: &Path) -> Result<()> {
         let dest_path = dst.join(&file_name);
 
         if path.is_dir() {
-            copy_dir_recursive(&path, &dest_path).await?;
+            Box::pin(copy_dir_recursive(&path, &dest_path)).await?;
         } else {
             tokio::fs::copy(&path, &dest_path).await?;
         }
