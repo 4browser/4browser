@@ -13,13 +13,21 @@ use log::info;
 use std::path::PathBuf;
 
 #[tokio::main]
-async fn main() -> Result<()> {
+async fn main() {
     env_logger::Builder::from_default_env()
         .format_timestamp_millis()
         .init();
 
     info!("🌐 4 Browser Starting...");
 
+    if let Err(e) = run().await {
+        eprintln!("Fatal error: {}", e);
+        log::error!("Fatal error: {}", e);
+        std::process::exit(1);
+    }
+}
+
+async fn run() -> Result<()> {
     let app_data_dir = get_app_data_dir()?;
     info!("App data directory: {:?}", app_data_dir);
 
