@@ -2,6 +2,7 @@
 
 A modern, feature-rich Chromium-based web browser built with Rust. Designed for privacy, performance, and customization with a sleek UI and powerful features.
 
+
 Binary name: `fourbrowser` (compiled as `fourbrowser` or `fourbrowser.exe` on Windows)
 
 ## ✨ Key Features
