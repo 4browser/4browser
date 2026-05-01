@@ -43,6 +43,10 @@ dirs = "5.0"
 egui = "0.24"
 eframe = { version = "0.24", features = ["default"] }
 
+# Windows API
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["winuser", "windef"] }
+
 [dev-dependencies]
 tempfile = "3.8"
 
