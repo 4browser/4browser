@@ -9,6 +9,7 @@ mod permissions;
 mod settings;
 mod ui;
 mod utils;
+mod web;
 
 use anyhow::Result;
 use log::info;

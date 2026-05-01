@@ -43,6 +43,11 @@ dirs = "5.0"
 egui = "0.24"
 eframe = { version = "0.24", features = ["default"] }
 
+# Web server for frontend
+actix-web = "4.4"
+actix-rt = "2.9"
+tokio-util = "0.7"
+
 # Windows API
 [target.'cfg(windows)'.dependencies]
 winapi = { version = "0.3", features = ["winuser", "windef"] }
