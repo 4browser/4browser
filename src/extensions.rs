@@ -49,6 +49,7 @@ pub struct Extension {
     pub installed_at: chrono::DateTime<chrono::Utc>,
 }
 
+#[derive(Clone)]
 pub struct ExtensionManager {
     extensions: Arc<RwLock<HashMap<String, Extension>>>,
     app_data_dir: PathBuf,

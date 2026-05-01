@@ -47,6 +47,7 @@ pub struct PermissionRequest {
     pub requested_at: chrono::DateTime<chrono::Utc>,
 }
 
+#[derive(Clone)]
 pub struct PermissionManager {
     permissions: Arc<RwLock<HashMap<String, PermissionState>>>,
     pending_requests: Arc<RwLock<Vec<PermissionRequest>>>,
